@@ -1,4 +1,9 @@
-import { ChangeEventHandler, KeyboardEventHandler, useRef, useState } from 'react';
+import {
+  ChangeEventHandler,
+  KeyboardEventHandler,
+  useRef,
+  useState,
+} from 'react';
 
 import TodoText from '../todo/todotext';
 
@@ -36,11 +41,13 @@ export default function TodoAdd() {
           className: 'placeholder:text-[#787598] px-2 py-3 pl-3',
           onChange,
           onKeyDown,
-          ref: inputRef
+          ref: inputRef,
+          'data-testid': 'addTodoInput',
         }}
       />
       <button
         onClick={addTodoHandler}
+        data-testid="addTodoButton"
         className="h-full px-4 flex gap-2 items-center justify-center font-semibold bg-black text-white rounded-r-lg"
       >
         <i className="bx bx-plus text-xl"></i>

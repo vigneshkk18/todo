@@ -4,7 +4,9 @@ interface TodoText {
   inputProps: React.DetailedHTMLProps<
     React.InputHTMLAttributes<HTMLInputElement>,
     HTMLInputElement
-  >;
+  > & {
+    "data-testid"?: string
+  };
 }
 
 export default function TodoText({ completed, text, inputProps }: TodoText) {
